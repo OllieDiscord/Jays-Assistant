@@ -22,7 +22,7 @@ module.exports = {
         const TargetMember = await guild.members.fetch(TargetUser.id);
         const BanReason = options.getString("reason") || "No reason provided.";
 
-        const LoggingChannel = guild.channels.cache.get("1015690495583850597");
+        const LoggingChannel = guild.channels.cache.get("946156432057860103");
         const CaseId = randomstring.generate({ length: 18, charset: "numeric" });
 
         const CannotBanEmbed = new MessageEmbed().setColor("RED").setDescription(`${ERROR_EMOJI} | You cannot ban Moderators/Admins.`)
