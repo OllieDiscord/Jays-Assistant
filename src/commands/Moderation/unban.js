@@ -21,7 +21,7 @@ module.exports = {
         const TargetID = options.getString("id");
         const UnbanReason = options.getString("reason") || "No reason provided."
 
-        const LoggingChannel = guild.channels.cache.get("1015690495583850597");
+        const LoggingChannel = guild.channels.cache.get("946156432057860103");
         const CaseId = randomstring.generate({ length: 18, charset: "numeric" });
 
         await guild.bans.fetch().then(async (bans) => {
