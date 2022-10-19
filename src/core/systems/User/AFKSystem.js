@@ -12,7 +12,7 @@ module.exports = (client) => {
         };
 
         if (message.mentions.members.size) {
-            message.mentions.forEach((m) => {
+            message.mentions.members.forEach((m) => {
                 database.findOne({ GuildID: message.guild.id, UserID: m.author.id }, async (err, data) => {
                     if (err) throw err;
                     if (data) {
