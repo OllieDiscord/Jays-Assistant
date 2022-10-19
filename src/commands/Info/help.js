@@ -27,7 +27,11 @@ module.exports = {
             },
             {
                 name: "• Misc",
-                value: "> `afk, avatar, report, suggest, waifu`"
+                value: "> `afk, avatar, report, suggest`"
+            },
+            {
+                name: "• Nsfw",
+                value: "> `waifu`"
             },
             {
                 name: "• Util",
