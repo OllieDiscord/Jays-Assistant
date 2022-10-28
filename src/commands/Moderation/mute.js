@@ -3,6 +3,7 @@ const { SlashCommandBuilder } = require("@discordjs/builders");
 const { PermissionFlagsBits } = require("discord-api-types/v10");
 const { DM_EMBED_COLOUR, SUCCESS_EMOJI, ERROR_EMOJI } = require("../../core/db/data/DesignOptions.json");
 const randomstring = require("randomstring");
+const ms = require("ms");
 
 module.exports = {
     data: new SlashCommandBuilder()
@@ -10,8 +11,8 @@ module.exports = {
     .setDescription("Mutes a user.")
     .setDefaultMemberPermissions(PermissionFlagsBits.ModerateMembers)
     .addUserOption((option) => option.setName("target").setDescription("The user to mute.").setRequired(true))
-    .addStringOption((option) => option.setName("duration").setDescription("Duration of the mute.").setRequired(true))
-    .addStringOption((option) => option.setName("reason").setDescription("The ban reason.").setMaxLength(1000).setMinLength(2)),
+    .addStringOption((option) => option.setName("duration").setDescription("Duration of the mute (1d, 10m, 6h).").setRequired(true))
+    .addStringOption((option) => option.setName("reason").setDescription("The mute reason.").setMaxLength(1000).setMinLength(2)),
     /**
      * 
      * @param {CommandInteraction} interaction 
@@ -21,7 +22,7 @@ module.exports = {
 
         const TargetUser = options.getUser("target");
         const TargetMember = await guild.members.fetch(TargetUser.id);
-        const MuteDuration = Number(options.getString("duration")) * 60 * 1000
+        const MuteDuration = options.getString("duration");
         const MuteReason = options.getString("reason") || "No reason provided.";
 
         const LoggingChannel = guild.channels.cache.get("946156432057860103");
@@ -32,6 +33,9 @@ module.exports = {
 
         const AlreadyMutedEmbed = new MessageEmbed().setColor("RED").setDescription(`${ERROR_EMOJI} | This user is already muted.`)
         if (TargetMember.isCommunicationDisabled === true) return interaction.reply({ embeds: [AlreadyMutedEmbed] });
+
+        const HitLimitEmbed = new MessageEmbed().setColor("RED").setDescription(`${ERROR_EMOJI} | The maximum limit is **28d**.`)
+        if (!ms(MuteDuration) || ms(MuteDuration) > ms("28d")) return interaction.reply({ embeds: [HitLimitEmbed] });
 
         const DMEmbed = new MessageEmbed()
         .setColor(DM_EMBED_COLOUR)
@@ -50,7 +54,7 @@ module.exports = {
 
         await TargetUser.send({ embeds: [DMEmbed] }).catch(console.error);
 
-        await TargetMember.timeout(MuteDuration, MuteReason).then(() => {
+        await TargetMember.timeout(ms(MuteDuration), MuteReason).then(() => {
             const MuteSuccessEmbed = new MessageEmbed().setColor("GREEN").setDescription(`${SUCCESS_EMOJI} | <@${TargetUser.id}> has been muted | \`${CaseId}\``)
             interaction.reply({ embeds: [MuteSuccessEmbed] });
         });
