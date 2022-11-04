@@ -15,7 +15,7 @@ module.exports = {
         const HelpEmbed = new MessageEmbed()
         .setColor(EMBED_COLOUR)
         .setAuthor({ name: `${client.user.username} | Help`, iconURL: `${client.user.avatarURL()}` })
-        .setDescription("Cord Utilities is a private bot for mainly moderation and utilities, currently maintained and managed by <@697541992770437130>")
+        .setDescription(`${client.user.username} is a private bot for mainly moderation and utilities, currently maintained and managed by <@697541992770437130>`)
         .setFields(
             {
                 name: "• Information",
@@ -27,7 +27,7 @@ module.exports = {
             },
             {
                 name: "• Misc",
-                value: "> `afk, avatar, suggest`"
+                value: "> `afk, avatar, suggest, boyup, confess`"
             },
             {
                 name: "• Util",
