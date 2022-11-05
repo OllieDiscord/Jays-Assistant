@@ -9,6 +9,6 @@ module.exports = {
      */
     async execute(client) {
         console.log(`[ONLINE] Logged in as ${client.user.tag}`);
-        client.user.setActivity({ name: "Cord Community", type: ActivityType.Watching });
+        client.user.setActivity({ name: "JayCord", type: ActivityType.Watching });
     },
 };
