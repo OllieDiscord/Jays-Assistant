@@ -19,7 +19,7 @@ module.exports = {
         .setFields(
             {
                 name: "• Information",
-                value: "> `help, membercount, serverinfo, userinfo`"
+                value: "> `help, membercount, serverinfo, userinfo, showcommands`"
             },
             {
                 name: "• Moderation",
