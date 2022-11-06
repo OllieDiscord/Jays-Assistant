@@ -17,7 +17,7 @@ module.exports = {
         
         const Embed = new MessageEmbed()
         .setColor(EMBED_COLOUR)
-        .setTitle("Registered Commands")
+        .setTitle(`Registered Commands (${client.commands.size})`)
         .setDescription(`\`${commandsList.join(", ")}\``)
 
         interaction.reply({ embeds: [Embed] });
