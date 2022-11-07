@@ -10,8 +10,8 @@ module.exports = {
     .setName("blacklist")
     .setDescription("Blacklist a user from using the bot.")
     .setDefaultMemberPermissions(PermissionFlagsBits.ManageGuild)
-    .addUserOption((option) => option.setName("target").setDescription("The user to blacklist").setRequired(true))
-    .addStringOption((option) => option.setName("reason").setDescription("The blacklist reason").setMaxLength(1000).setMinLength(2)),
+    .addUserOption((option) => option.setName("target").setDescription("The user to blacklist.").setRequired(true))
+    .addStringOption((option) => option.setName("reason").setDescription("The blacklist reason.").setMaxLength(1000).setMinLength(2)),
     /**
      * 
      * @param {CommandInteraction} interaction 
