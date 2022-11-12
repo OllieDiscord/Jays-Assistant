@@ -21,7 +21,7 @@ module.exports = {
         const { guild, guildId, user, options, createdTimestamp } = interaction;
 
         const TargetUser = options.getUser("target");
-        const WarnReason = options.getString("reason");
+        const WarnReason = options.getString("reason") || "No reason provided.";
 
         const WarnDate = new Date(createdTimestamp).toDateString();
         const LoggingChannel = guild.channels.cache.get("946156432057860103");
