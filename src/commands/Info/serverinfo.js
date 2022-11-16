@@ -14,10 +14,13 @@ module.exports = {
         const { guild, guildId } = interaction;
         const guildOwner = (await guild.fetchOwner()).user.tag;
 
+        const ServerBanner = guild.bannerURL({ size: 2048 });
+
         const InfoEmbed = new MessageEmbed()
         .setColor(EMBED_COLOUR)
         .setAuthor({ name: `${guild.name}`, iconURL: `${guild.iconURL()}`})
         .setThumbnail(`${guild.iconURL({ dynamic: true })}`)
+        .setImage(ServerBanner || null)
         .setFields(
             {
                 name: "• Description",
