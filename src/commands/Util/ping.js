@@ -16,6 +16,6 @@ module.exports = {
         const sentMessage = await interaction.reply({ content: "Pinging..", fetchReply: true });
         const latency = sentMessage.createdTimestamp - createdTimestamp;
 
-        interaction.editReply({ content: `Latency: \`${latency}\`ms\nAPI Latency: \`${Math.round(client.ws.ping)}ms\``});
+        interaction.editReply({ content: `Latency: **${latency}ms** - API: **${Math.round(client.ws.ping)}ms**`});
     },
 };
