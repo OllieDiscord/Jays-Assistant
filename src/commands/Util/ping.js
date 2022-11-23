@@ -10,7 +10,12 @@ module.exports = {
      * @param {CommandInteraction} interaction 
      * @param {Client} client 
      */
-    execute(interaction, client) {
-        interaction.reply({ content: `Pong! \`${client.ws.ping}ms\`` });
+    async execute(interaction, client) {
+        const { createdTimestamp } = interaction;
+
+        const sentMessage = await interaction.reply({ content: "Pinging..", fetchReply: true });
+        const latency = sentMessage.createdTimestamp - createdTimestamp;
+
+        interaction.editReply({ content: `Latency: \`${latency}\`ms\nAPI Latency: \`${Math.round(client.ws.ping)}ms\``});
     },
 };
