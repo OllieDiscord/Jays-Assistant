@@ -23,13 +23,3 @@ body:
       description: What was it originally supposed to do?
     validations:
       required: true
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Promise
-      description: By submitting, you agree that all information provided is described in detail and is true.
-      options:
-        - label: I agree
-        required: true
-    validations:
-      required: true
