@@ -11,7 +11,7 @@ module.exports = {
     .setName("warn")
     .setDescription("Warns a user")
     .setDefaultMemberPermissions(PermissionFlagsBits.ModerateMembers)
-    .addUserOption((option) => option.setName("target").setDescription("The user to warn").setRequired(true))
+    .addUserOption((option) => option.setName("target").setDescription("The user to warn.").setRequired(true))
     .addStringOption((option) => option.setName("reason").setDescription("The warn reason.").setMaxLength(1000).setMinLength(2)),
     /**
      * 
