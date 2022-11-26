@@ -27,7 +27,7 @@ module.exports = {
             },
             {
                 name: "• Misc",
-                value: "> `afk, avatar, confess`"
+                value: "> `avatar`"
             },
             {
                 name: "• Util",
