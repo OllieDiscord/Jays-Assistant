@@ -31,7 +31,7 @@ module.exports = {
             },
             {
                 name: "• Util",
-                value: "> `blacklist, debug, ping, ticket, eval, block`"
+                value: "> `blacklist, debug, ping, ticket, eval`"
             }
         )
         
