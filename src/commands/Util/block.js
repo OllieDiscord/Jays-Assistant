@@ -26,7 +26,7 @@ module.exports = {
         const UnableToBlockEmbed = new MessageEmbed().setColor("RED").setDescription(`${ERROR_EMOJI} | Unable to block this user.`)
         if (TargetMember.permissions.has("MANAGE_GUILD")) return interaction.reply({ embeds: [UnableToBlockEmbed] });
 
-        if (await db.findOne({ GuildID: guildId, UserID: TargetUser.id })) {
+        if (await database.findOne({ GuildID: guildId, UserID: TargetUser.id })) {
             const AlreadyBlacklistedEmbed = new MessageEmbed().setColor("RED").setDescription(`${ERROR_EMOJI} | This user is already blocked.`)
             return interaction.reply({ embeds: [AlreadyBlacklistedEmbed] });
         } else {
