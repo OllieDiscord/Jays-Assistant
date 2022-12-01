@@ -38,7 +38,7 @@ module.exports = {
             if (!bannedId) return interaction.reply({ embeds: [InvalidIDEmbed] });
 
             await guild.bans.remove(TargetID, UnbanReason).then(() => {
-                const UnbannedEmbed = new MessageEmbed().setColor("GREEN").setDescription(`${Success_Emoji} | <@${TargetID.id}> has been unbanned | \`${CaseId}\``)
+                const UnbannedEmbed = new EmbedBuilder().setColor("GREEN").setDescription(`${Success_Emoji} | <@${TargetID.id}> has been unbanned | \`${CaseId}\``)
                 interaction.reply({ embeds: [UnbannedEmbed] });
                 
                 const LogEmbed = new EmbedBuilder()

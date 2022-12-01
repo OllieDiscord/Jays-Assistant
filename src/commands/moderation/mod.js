@@ -1,4 +1,5 @@
 const { ChatInputCommandInteraction, SlashCommandBuilder, EmbedBuilder, PermissionFlagsBits } = require('discord.js');
+const { Error_Emoji } = require('../../config.json');
 const randomstring = require('randomstring');
 
 module.exports = {
