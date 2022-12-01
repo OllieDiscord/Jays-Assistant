@@ -14,6 +14,8 @@ module.exports = {
     .addStringOption(option => option
             .setName('nickname')
             .setDescription('New nickname.')
+            .setMaxLength(32)
+            .setMinLength(1)
     ),
     /**
      * @param {ChatInputCommandInteraction} interaction
