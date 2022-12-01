@@ -1,0 +1,26 @@
+{
+  "name": "jays-assistant",
+  "version": "1.0.0",
+  "description": "A private moderation and utility bot for JayCord",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JayCordDev/Jays-Assistant.git"
+  },
+  "author": "Not-Jayy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JayCordDev/Jays-Assistant/issues"
+  },
+  "homepage": "https://github.com/JayCordDev/Jays-Assistant#readme",
+  "dependencies": {
+    "discord.js": "^14.7.1",
+    "dotenv": "^16.0.3",
+    "mongoose": "^6.7.5",
+    "ms": "^2.1.3",
+    "randomstring": "^1.2.3"
+  }
+}
