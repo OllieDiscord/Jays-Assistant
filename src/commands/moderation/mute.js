@@ -68,7 +68,7 @@ module.exports = {
         });
 
         const LogEmbed = new EmbedBuilder()
-        .setColor('Red')
+        .setColor('Yellow')
         .setAuthor({ name: `${user.tag}`, iconURL: `${user.displayAvatarURL()}` })
         .setDescription(`**Member**: <@${TargetUser.id}> | \`${TargetUser.id}\`\n**Type**: Mute\n**Expires**: <t:${parseInt(TargetMember.communicationDisabledUntilTimestamp / 1000)}:R>\n**Reason**: ${MuteReason}`)
         .setFooter({ text: `Punishment ID: ${CaseId}` })
