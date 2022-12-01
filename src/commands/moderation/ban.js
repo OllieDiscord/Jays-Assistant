@@ -65,7 +65,7 @@ module.exports = {
         const LogEmbed = new EmbedBuilder()
         .setColor('Red')
         .setAuthor({ name: `${user.tag}`, iconURL: `${user.displayAvatarURL()}` })
-        .setDescription(`**Member**: <@${TargetUser.id}> | \`${TargetUser.id}\`\n **Type**: Ban\n**Reason**: ${BanReason}`)
+        .setDescription(`**Member**: <@${TargetUser.id}> | \`${TargetUser.id}\`\n**Type**: Ban\n**Reason**: ${BanReason}`)
         .setFooter({ text: `Punishment ID: ${CaseId}` })
         .setTimestamp();
 
