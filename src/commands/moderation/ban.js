@@ -58,7 +58,7 @@ module.exports = {
         await TargetUser.send({ embeds: [DirectEmbed] }).catch((console.error));
 
         await TargetMember.ban({ deleteMessageSeconds: 86400, reason: BanReason }).then(() => {
-            const BanSuccessEmbed = new EmbedBuilder().setColor("GREEN").setDescription(`${Success_Emoji} | <@${TargetUser.id}> has been banned | \`${CaseId}\``)
+            const BanSuccessEmbed = new EmbedBuilder().setColor('Green').setDescription(`${Success_Emoji} | <@${TargetUser.id}> has been banned | \`${CaseId}\``)
             interaction.reply({ embeds: [BanSuccessEmbed] });
         });
 

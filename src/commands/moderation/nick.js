@@ -25,7 +25,7 @@ module.exports = {
         const TargetMember = await guild.members.fetch(TargetUser.id);
         const Nickname = options.getString('nickname');
 
-        const CannotChangeEmbed = new EmbedBuilder().setColor("Red").setDescription(`${Error_Emoji} | Unable to moderate this user.`)
+        const CannotChangeEmbed = new EmbedBuilder().setColor('Red').setDescription(`${Error_Emoji} | Unable to moderate this user.`)
         if (!TargetMember.moderatable) return interaction.reply({ embeds: [CannotChangeEmbed] });
 
         if (!Nickname) {

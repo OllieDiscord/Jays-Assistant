@@ -50,7 +50,7 @@ module.exports = {
         await TargetUser.send({ embeds: [DirectEmbed] }).catch((console.error));
 
         await TargetMember.kick(KickReason).then(() => {
-            const KickSuccessEmbed = new EmbedBuilder().setColor("GREEN").setDescription(`${Success_Emoji} | <@${TargetUser.id}> has been kicked | \`${CaseId}\``)
+            const KickSuccessEmbed = new EmbedBuilder().setColor('Green').setDescription(`${Success_Emoji} | <@${TargetUser.id}> has been kicked | \`${CaseId}\``)
             interaction.reply({ embeds: [KickSuccessEmbed] });
         });
 

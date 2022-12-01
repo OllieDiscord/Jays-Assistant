@@ -63,7 +63,7 @@ module.exports = {
         await TargetUser.send({ embeds: [DirectEmbed] }).catch((console.error));
 
         await TargetMember.timeout(ms(MuteDuration)).then(() => {
-            const MuteSuccessEmbed = new EmbedBuilder().setColor("GREEN").setDescription(`${Success_Emoji} | <@${TargetUser.id}> has been muted | \`${CaseId}\``)
+            const MuteSuccessEmbed = new EmbedBuilder().setColor('Green').setDescription(`${Success_Emoji} | <@${TargetUser.id}> has been muted | \`${CaseId}\``)
             interaction.reply({ embeds: [MuteSuccessEmbed] });
         });
 
