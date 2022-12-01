@@ -78,7 +78,7 @@ module.exports = {
             data.save();
         });
 
-        const WarnSuccessEmbed = new EmbedBuilder().setColor('Green').setDescription(`${SUCCESS_EMOJI} | <@${TargetUser.id}> has been warned | \`${CaseId}\``)
+        const WarnSuccessEmbed = new EmbedBuilder().setColor('Green').setDescription(`${Success_Emoji} | <@${TargetUser.id}> has been warned | \`${CaseId}\``)
         interaction.reply({ embeds: [WarnSuccessEmbed] });
 
         const LogEmbed = new MessageEmbed()
