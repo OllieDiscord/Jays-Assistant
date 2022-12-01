@@ -1,3 +1,5 @@
+console.clear();
+
 const { Client, GatewayIntentBits, Collection } = require('discord.js');
 const { readdirSync } = require('fs');
 const { connect } = require('mongoose');
@@ -21,7 +23,7 @@ for (const file of handlerFiles) require(`./handlers/${file}`)(client);
 const systemFolders = readdirSync('./src/systems/');
 for (const folder of systemFolders) {
     const systemFiles = readdirSync(`./src/systems/${folder}`).filter(file => file.endsWith('.js'));
-    for (const file of systemFiles) require(`../systems/${folder}/${file}`)(client);    
+    for (const file of systemFiles) require(`../src/systems/${folder}/${file}`)(client);    
 };
 
 client.handleCommands();

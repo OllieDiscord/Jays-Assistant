@@ -4,8 +4,8 @@ const randomstring = require('randomstring');
 
 module.exports = {
     data: new SlashCommandBuilder()
-    .setName('ban')
-    .setDescription('Ban a user from the server.')
+    .setName('unban')
+    .setDescription('Unbans a user from the server.')
     .setDefaultMemberPermissions(PermissionFlagsBits.BanMembers)
     .addStringOption(option => option
             .setName('target')
