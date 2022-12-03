@@ -56,5 +56,4 @@ body:
       description: By submitting this form you agree that information provided is detailed and not fake.
       options:
         - label: I agree
-    validations:
-      required: true
+          required: true
