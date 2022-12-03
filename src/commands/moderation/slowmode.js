@@ -5,7 +5,7 @@ module.exports = {
     .setName('slowmode')
     .setDescription('Sets a channels slowmode.')
     .setDefaultMemberPermissions(PermissionFlagsBits.ManageChannels)
-    .addUserOption(option => option
+    .addStringOption(option => option
             .setName('duration')
             .setDescription('Slowmode duration.')
     ),
@@ -28,7 +28,7 @@ module.exports = {
                 interaction.reply({ content: 'Slowmode disabled.' });
             };
         } else {
-            channel.setRateLimitPerUser(SlowmodeDuration)
+            channel.setRateLimitPerUser(SlowmodeDuration);
             interaction.reply({ content: `Slowmode has been set to \`${SlowmodeDuration}\`` });
         };
     },
