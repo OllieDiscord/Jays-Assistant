@@ -30,6 +30,7 @@ module.exports = {
 
         const TargetUser = options.getUser('target') || user;
         const TargetMember = await guild.members.fetch(TargetUser.id);
+        const ForceBan = options.getBoolean('force');
         const BanReason = options.getString('reason') || 'No reason provided.';
 
         const LogChannel = guild.channels.cache.get('946156432057860103');
@@ -57,15 +58,22 @@ module.exports = {
 
         await TargetUser.send({ embeds: [DirectEmbed] }).catch((console.error));
 
-        await TargetMember.ban({ deleteMessageSeconds: 86400, reason: BanReason }).then(() => {
-            const BanSuccessEmbed = new EmbedBuilder().setColor('Green').setDescription(`${Success_Emoji} | <@${TargetUser.id}> has been banned | \`${CaseId}\``)
-            interaction.reply({ embeds: [BanSuccessEmbed] });
-        });
+        if (ForceBan) {
+            await TargetMember.ban({ deleteMessageSeconds: 86400, reason: BanReason }).then(() => {
+                const BanSuccessEmbed = new EmbedBuilder().setColor('Green').setDescription(`${Success_Emoji} | <@${TargetUser.id}> has been banned | \`${CaseId}\``)
+                interaction.reply({ embeds: [BanSuccessEmbed] });
+            });
+        } else {
+            await guild.bans.create(TargetUser).then(() => {
+                const ForceBanSuccessEmbed = new EmbedBuilder().setColor('Green').setDescription(`${Success_Emoji} | <@${TargetUser.id}> has been **force** banned | \`${CaseId}\``)
+                interaction.reply({ embeds: [ForceBanSuccessEmbed] });
+            });
+        };
 
         const LogEmbed = new EmbedBuilder()
         .setColor('Red')
         .setAuthor({ name: `${user.tag}`, iconURL: `${user.displayAvatarURL()}` })
-        .setDescription(`**Member**: <@${TargetUser.id}> | \`${TargetUser.id}\`\n**Type**: Ban\n**Reason**: ${BanReason}`)
+        .setDescription(`**Member**: <@${TargetUser.id}> | \`${TargetUser.id}\`\n**Type**: Ban\n**Force?** ${ForceBan}\n**Reason**: ${BanReason}`)
         .setFooter({ text: `Punishment ID: ${CaseId}` })
         .setTimestamp();
 
