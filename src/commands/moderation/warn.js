@@ -15,7 +15,7 @@ module.exports = {
     )
     .addStringOption(option => option
             .setName('reason')
-            .setDescription('The unban reason.')
+            .setDescription('The warn reason.')
             .setMaxLength(1000)
             .setMinLength(1)
     ),

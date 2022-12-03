@@ -12,16 +12,27 @@ module.exports = {
 
         const embed = new EmbedBuilder()
         .setTitle('Hey!')
+<<<<<<< HEAD
         .setDescription('Use `/` to bring up all the commands.\nUse the Drop Down Menu given below to navigate through the help menu')
+=======
+        .setDescription('You can use `/` to bring up all the commands.\nUse the Drop Down Menu given below to navigate through the help menu.')
+>>>>>>> fa27b4cb68eaac2bd1de60a156b39676a5cd8666
         .setColor('Aqua')
         .setTimestamp()
         .setFooter({ text: `Requested by ${user.tag}` })
 
         const embed2 = new EmbedBuilder()
+<<<<<<< HEAD
         .setTitle('Miscellanous Commands')
         .setDescription(
             `**/avatar:** Gets a users avatar.\n` +
             `**/help:** Brings up the help menu.!\n`
+=======
+        .setTitle('Miscellaneous Commands')
+        .setDescription(
+            `**/avatar:** Gets a user's avatar.\n` +
+            `**/help:** Brings up the help menu!\n`
+>>>>>>> fa27b4cb68eaac2bd1de60a156b39676a5cd8666
         )
         .setColor('Yellow')
         .setFooter({ text: `Requested by ${user.tag}` })
@@ -29,9 +40,15 @@ module.exports = {
         const embed3 = new EmbedBuilder()
         .setTitle('Info Commands')
         .setDescription(
+<<<<<<< HEAD
             `**/membercount:** Gets the current amount of members.\n` +
             `**/userinfo (user):** Gets information about a user.\n` +
             `**/serverinfo:** Gets information about the server.\n`
+=======
+            `**/membercount:** Gets the current number of members.\n` +
+            `**/userinfo (user):** Gets information on a user.\n` +
+            `**/serverinfo:** Gets information on the server.\n`
+>>>>>>> fa27b4cb68eaac2bd1de60a156b39676a5cd8666
         )
         .setColor('Red')
         .setFooter({ text: `Requested by ${user.tag}` })
@@ -40,8 +57,13 @@ module.exports = {
         const embed4 = new EmbedBuilder()
         .setTitle('Utility Commands')
         .setDescription(
+<<<<<<< HEAD
             `**/debug:** Returns with bot stats.\n` +
             `**/ping:** Returns with the bots ping.`
+=======
+            `**/debug:** Returns bot statistics.\n` +
+            `**/ping:** Returns the bot's ping.`
+>>>>>>> fa27b4cb68eaac2bd1de60a156b39676a5cd8666
         )
         .setColor('DarkOrange')
         .setFooter({ text: `Requested by ${user.tag}` })
@@ -50,6 +72,7 @@ module.exports = {
         const embed5 = new EmbedBuilder()
         .setTitle('Moderation Commands')
         .setDescription(
+<<<<<<< HEAD
             `**/ban (target) (reason) (force):** Ban a user from the server.\n` +
             `**/unban (target) (reason):** Unbans a user from the server..\n` +
             `**/kick (target) (reason):** Kick a user from the server.\n` +
@@ -59,6 +82,17 @@ module.exports = {
             `**/nick (target) (nickname):** Change or reset a members nickname.\n` +
             `**/clear (amount):** Clear messages from a channel.\n` +
             `**/slowmode (time) (reason):** Sets a channels slowmode.`
+=======
+            `**/ban (target) (reason) (force):** Bans a user from the server.\n` +
+            `**/unban (target) (reason):** Unbans a user from the server..\n` +
+            `**/kick (target) (reason):** Kicks a user from the server.\n` +
+            `**/mute (target) (duration) (reason):** Mutes a user.\n` +
+            `**/warn (target) (reason):** Warns a user.\n` +
+            `**/mod (user):** Moderates a user's server nickname.\n` +
+            `**/nick (target) (nickname):** Changes or resets a member's nickname.\n` +
+            `**/clear (amount):** Clears messages from a channel.\n` +
+            `**/slowmode (time) (reason):** Sets channel slowmode to the specified time.`
+>>>>>>> fa27b4cb68eaac2bd1de60a156b39676a5cd8666
         )
         .setColor('Orange')
         .setFooter({ text: `Requested by ${user.tag}` })
@@ -120,4 +154,8 @@ module.exports = {
             console.log(error);
         }
     },
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> fa27b4cb68eaac2bd1de60a156b39676a5cd8666
