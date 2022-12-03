@@ -4,10 +4,10 @@ const { Default_Embed_Colour } = require('../../config.json');
 module.exports = {
     data: new SlashCommandBuilder()
     .setName('avatar')
-    .setDescription('Gets a users avatar.')
+    .setDescription(`Gets a user's avatar.`)
     .addUserOption(option => option
             .setName('target')
-            .setDescription('User to get the avatar from.')
+            .setDescription('The user whose avatar you want to fetch.')
     ),
     /**
      * @param {ChatInputCommandInteraction} interaction
