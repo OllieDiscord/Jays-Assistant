@@ -26,7 +26,7 @@ body:
   - type: dropdown
     id: bug-severity
     attributes:
-      label: How serve is this bug?
+      label: How severe is this bug?
       description: Helps determine which bug determines most priority.
       multiple: false
       options:
