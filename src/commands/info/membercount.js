@@ -4,7 +4,7 @@ const { Default_Embed_Colour } = require('../../config.json');
 module.exports = {
     data: new SlashCommandBuilder()
     .setName('membercount')
-    .setDescription('Gets the current amount of members.'),
+    .setDescription('Gets the current number of members.'),
     /**
      * @param {ChatInputCommandInteraction} interaction
      */

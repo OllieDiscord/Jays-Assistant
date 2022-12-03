@@ -4,10 +4,10 @@ const { Default_Embed_Colour } = require('../../config.json');
 module.exports = {
     data: new SlashCommandBuilder()
     .setName('userinfo')
-    .setDescription('Gets information about a user.')
+    .setDescription('Gets information on a user.')
     .addUserOption(option => option
         .setName('target')
-        .setDescription('User to get information about.')
+        .setDescription('The user whose info you want to fetch.')
     ),
     /**
      * @param {ChatInputCommandInteraction} interaction
