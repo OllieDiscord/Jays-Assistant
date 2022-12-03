@@ -28,7 +28,7 @@ body:
     attributes:
       label: How serve is this bug?
       description: Helps determine which bug determines most priority.
-      multiple: true
+      multiple: false
       options:
         - High
         - Medium
@@ -47,5 +47,14 @@ body:
     attributes:
       label: Expectation
       description: What was expected to happen?
+    validations:
+      required: true
+  - type: checkboxes
+    id: agreement
+    attributes:
+      label: Agreement
+      description: By submitting this form you agree that information provided is detailed and not fake.
+      options:
+        - label: I agree
     validations:
       required: true
