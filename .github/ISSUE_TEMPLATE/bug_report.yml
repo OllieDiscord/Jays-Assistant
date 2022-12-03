@@ -1,0 +1,51 @@
+name: Bug Report
+description: Make a bug report.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: Discord Username/ID (If we need more information).
+      placeholder: wumpus#0001
+    validations:
+      required: false
+  - type: dropdown
+    id: affected-module
+    attributes:
+      label: What does this affect?
+      description: Select a category in which this bug affects.
+      multiple: true
+      options:
+        - Commands
+        - Systems
+        - Core Functionality
+    validations:
+      required: true
+  - type: dropdown
+    id: bug-severity
+    attributes:
+      label: How serve is this bug?
+      description: Helps determine which bug determines most priority.
+      multiple: true
+      options:
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: Description
+      description: Describe the bug in as much detail as possible.
+    validations:
+      required: true
+  - type: textarea
+    id: what-expected
+    attributes:
+      label: Expectation
+      description: What was expected to happen?
+    validations:
+      required: true
