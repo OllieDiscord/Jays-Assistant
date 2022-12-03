@@ -10,7 +10,7 @@ body:
       description: Discord Username/ID (If we need more information).
       placeholder: wumpus#0001
     validations:
-      required: false
+      required: true
   - type: dropdown
     id: affected-module
     attributes:
