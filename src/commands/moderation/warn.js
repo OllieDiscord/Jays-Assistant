@@ -46,7 +46,7 @@ module.exports = {
             }
         )
         .setFooter({ text: `Punishment ID: ${CaseId}` })
-        .setTimestamp();
+        .setTimestamp()
 
         await TargetUser.send({ embeds: [DirectEmbed] }).catch((console.error));
 

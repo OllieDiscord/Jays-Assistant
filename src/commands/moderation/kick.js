@@ -45,7 +45,7 @@ module.exports = {
             }
         )
         .setFooter({ text: `Punishment ID: ${CaseId}` })
-        .setTimestamp();
+        .setTimestamp()
 
         await TargetUser.send({ embeds: [DirectEmbed] }).catch((console.error));
 
@@ -59,7 +59,7 @@ module.exports = {
         .setAuthor({ name: `${user.tag}`, iconURL: `${user.displayAvatarURL()}` })
         .setDescription(`**Member**: <@${TargetUser.id}> | \`${TargetUser.id}\`\n**Type**: Kick\n**Reason**: ${KickReason}`)
         .setFooter({ text: `Punishment ID: ${CaseId}` })
-        .setTimestamp();
+        .setTimestamp()
 
         LogChannel.send({ embeds: [LogEmbed] });
     },

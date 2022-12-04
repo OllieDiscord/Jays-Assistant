@@ -46,7 +46,7 @@ module.exports = {
                 .setAuthor({ name: `${user.tag}`, iconURL: `${user.displayAvatarURL()}` })
                 .setDescription(`**Member**: <@${TargetID.id}> | \`${TargetID.id}\`\n**Type**: Unban\n**Reason**: ${UnbanReason}`)
                 .setFooter({ text: `Punishment ID: ${CaseId}` })
-                .setTimestamp();
+                .setTimestamp()
         
                 LogChannel.send({ embeds: [LogEmbed] });
             });
