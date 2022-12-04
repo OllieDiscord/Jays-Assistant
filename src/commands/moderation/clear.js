@@ -21,6 +21,6 @@ module.exports = {
         const Amount = options.getNumber('amount');
 
         await channel.bulkDelete(Amount, true);
-        interaction.reply({ content: `Cleared ${Amount} message(s)` });
+        interaction.reply({ content: `Cleared ${Amount} message(s)`, ephemeral: true });
     },
 };

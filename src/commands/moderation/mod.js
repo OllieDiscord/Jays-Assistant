@@ -5,7 +5,7 @@ const randomstring = require('randomstring');
 module.exports = {
     data: new SlashCommandBuilder()
     .setName('mod')
-    .setDescription('Moderate a users name.')
+    .setDescription('Moderate a user\s name.')
     .setDefaultMemberPermissions(PermissionFlagsBits.ManageNicknames)
     .addUserOption(option => option
             .setName('target')

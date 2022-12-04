@@ -3,7 +3,7 @@ const { ChatInputCommandInteraction, SlashCommandBuilder, Client } = require('di
 module.exports = {
     data: new SlashCommandBuilder()
     .setName('ping')
-    .setDescription('Returns with the bots ping.'),
+    .setDescription('Returns with the bot\s ping.'),
     /**
      * @param {ChatInputCommandInteraction} interaction
      * @param {Client} client
