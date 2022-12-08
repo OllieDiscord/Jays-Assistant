@@ -4,4 +4,4 @@
 
 ## Contributing
 
-Please refer to the contribution guide located in ` .github > CONTRIBUTING.md `
+Please refer to the [contribution guide](/.github/CONTRIBUTING.md) to learn more.
