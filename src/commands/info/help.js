@@ -27,6 +27,7 @@ module.exports = {
         .setColor('DarkerGrey')
         .setTitle('Misc Commands')
         .setDescription(
+            '**/poll**: Create a poll.',
             '**/avatar**: Gets a user\s avatar.'
         )
 

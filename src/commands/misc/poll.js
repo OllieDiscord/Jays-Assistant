@@ -60,4 +60,8 @@ module.exports = {
         interaction.reply({ content: 'Poll created.', ephemeral: true });
         interaction.channel.send({ embeds: [PollEmbed], components: [row] });
     },
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> e30b733337e84f9b669d5fecd1e72b0e20126b88
